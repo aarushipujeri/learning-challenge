@@ -1,0 +1,51 @@
+<html>
+<body>
+
+<h2>Recognise Picture</h2>
+
+<img id="myImage" src="1.jpg" style="width:300px" onclick="changeImage()" onkeypress="myFunction(event)">
+
+<ul id="myList">
+</ul>
+<script language="javascript">
+var num = 1;
+total_image=60
+var time_total=0
+var startTime=Date.now();
+function changeImage() {
+	if (num < total_image) {
+		document.getElementById("myImage").src = num +'.jpg'
+		num++
+		var endTime = Date.now();
+		var difference = endTime - startTime;
+		startTime=endTime
+		time_total=time_total + difference
+		var node = document.createElement("LI");
+		var textnode = document.createTextNode('Reaction time: ' + difference + ' ms');
+		node.appendChild(textnode);
+		document.getElementById("myList").appendChild(node);
+		//document.write('Reaction time: ' + difference + ' ms');
+	} 	else {
+		alert("Avarage time taken: "+ ((time_total/total_image)/1000).toFixed(1) + "Sec");
+	}
+	
+}
+
+function myFunction(event) {
+	
+	document.getElementById("myImage").src = num +'.jpg'
+	num++
+	var endTime = Date.now();
+	var difference = endTime - startTime;
+	
+	var node = document.createElement("LI");
+	var textnode = document.createTextNode('Reaction time: ' + difference + ' ms');
+	node.appendChild(textnode);
+	document.getElementById("myList").appendChild(node);
+	
+	
+}
+</script> 
+
+</body>
+</html>
