@@ -28,6 +28,10 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/aarushipujeri/learning-challenge.git"
+},
  "browserslist": {
     "production": [
       ">0.2%",
