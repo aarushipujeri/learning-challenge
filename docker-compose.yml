@@ -4,7 +4,7 @@ services:
     container_name: app
     hostname: app
     build: ./app
-    image: aarushipujeri/picture-challenge-app
+    image: aarushipujeri/learning-challenge-app
     links:
       - "api:api"
     networks:
@@ -15,7 +15,7 @@ services:
     container_name: api
     hostname: api
     build: ./api
-    image: aarushipujeri/picture-challenge-api
+    image: aarushipujeri/learning-challenge-api
     links:
       - "mongo:mongo"
     networks:
