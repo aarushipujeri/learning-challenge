@@ -11,8 +11,6 @@ export HOST_UID
 
 
 build:
-	rm -rf app/build
-	cd app; npm run-script build
 	docker-compose build
 
 push:
