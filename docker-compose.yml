@@ -1,0 +1,38 @@
+version: '3'
+services:
+  app:
+    container_name: app
+    hostname: app
+    build: ./app
+    image: prabhakarpujeri/picture-challenge-app
+    links:
+      - "api:api"
+    networks:
+      - mynet
+    ports:
+      - "80:80"
+  api:
+    container_name: api
+    hostname: api
+    build: ./api
+    image: prabhakarpujeri/picture-challenge-api
+    links:
+      - "mongo:mongo"
+    networks:
+      - mynet
+    ports:
+      - "8080:8080"
+  mongo:
+    container_name: mongo
+    hostname: mongo
+    networks:
+      - mynet
+    image: mongo:latest
+    volumes:
+      - /home/db:/data/db
+    ports:
+      - "27017:27017"
+
+networks:
+  mynet:
+                
