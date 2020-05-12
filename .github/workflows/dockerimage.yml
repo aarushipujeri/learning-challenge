@@ -16,5 +16,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build Docker images
       run: make build 
+    - name: Docker Login
+      run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
     - name: push images to docker hub
       run: make push
