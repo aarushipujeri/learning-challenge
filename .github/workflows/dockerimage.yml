@@ -14,5 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker-compose build  --force-rm --no-cache 
+    - name: Build Docker images
+      run: make build 
+    - name: push images to docker hub
+      run: make push
