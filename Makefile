@@ -11,21 +11,20 @@ export HOST_UID
 
 
 build:
-  @echo 'buildig  Image'
-  rm -rf app/build
-  cd app; npm run-script build
-  docker-compose build
+	rm -rf app/build
+	cd app; npm run-script build
+	docker-compose build
 
 push:
-  docker-compose push
+	docker-compose push
 
 clean:
-  @echo "cleaning"
+	echo "cleaning"
 
 run:
-  @echo 'runing app'
-  docker-compose stop
-  docker-compose up -d
+	echo 'runing app'
+	docker-compose stop
+	docker-compose up -d
 
 
 
