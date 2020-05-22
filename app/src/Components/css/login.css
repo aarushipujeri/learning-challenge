@@ -1,0 +1,34 @@
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+.mybutton{
+    padding: 5;
+    height: 200;
+    width: 200;  
+    border-radius: 50%;
+    background-color: rgb(221, 11, 11) ;
+
+  }
+
+  .singlepost {
+    height: 25%;
+}
+.startbutton{
+  background-color: blue;
+}
+
+.progressbar{
+  background-color: blueviolet;
+}
+.number{
+  background-color: chocolate;
+}
+.result{
+  background-color: darkgreen;
+}

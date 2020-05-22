@@ -3,21 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
+	  "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "animejs": "^3.2.0",
     "moment": "^2.25.3",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.8",
-    "react-router-dom": "^5.1.2",
-    "react-row": "^1.0.2",
+    "react-i18next": "^11.4.0",
+    "react-linechart": "^1.1.12",
+    "react-moment": "^0.9.7",
+    "react-rangeslider": "^2.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-split-pane": "^0.1.91",
-    "react-switch": "^5.0.1",
-    "react-time": "^4.3.0",
-    "react-use": "^14.2.0",
-    "semantic-ui-react": "^0.88.2"
+    "react-splitter-layout": "^4.0.0",
+    "react-use": "^15.1.0",
+    "resize-observer-polyfill": "^1.5.1"
+
   },
   "scripts": {
     "start": "PORT=80 react-scripts start",
